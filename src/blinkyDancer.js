@@ -1,5 +1,5 @@
 // var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
-//   var blinkyDancer = makeDancer(top, left, timeBetweenSteps);
+//   var blinkyDancer = new MakeDancer(top, left, timeBetweenSteps);
 
 //   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
 //   // so we must keep a copy of the old version of this function
@@ -18,16 +18,32 @@
 //   return blinkyDancer;
 // };
 
-// pseudoclassical
+// pseudoclassical ES6
 
-class MakeBlinkyDancer extends MakeDancer {
+window.MakeBlinkyDancer = class MakeBlinkyDancer extends MakeDancer {
   constructor(top, left, timeBetweenSteps) {
     super(top, left, timeBetweenSteps);
-    this.step();
   }
   
   step() {
     MakeDancer.prototype.step.call(this);
     this.$node.toggle();
   }
-}
+};
+
+// pseudoclassical ES5
+
+// var MakeBlinkyDancer = function (top, left, timeBetweenSteps) {
+//   MakeDancer.call(this, top, left, timeBetweenSteps);
+//   this.top = top;
+//   this.left = left;
+//   this.timeBetweenSteps = timeBetweenSteps;
+// };
+
+// MakeBlinkyDancer.prototype = Object.create(MakeDancer.prototype);
+// MakeBlinkyDancer.prototype.constructor = MakeBlinkyDancer;
+
+// MakeBlinkyDancer.prototype.step = function() {
+//   MakeDancer.prototype.step.call(this);
+//   this.$node.toggle();
+// };

@@ -31,7 +31,7 @@
 //   return dancer;
 // };
 
-// pseudoclassical
+// pseudoclassical ES6
 
 class MakeDancer {
   constructor(top, left, timeBetweenSteps) {
@@ -44,16 +44,42 @@ class MakeDancer {
   }
   
   step() {
-    console.log('Step: ', this.step);
-    console.log('TBT: ', this.timeBetweenSteps);
-    setTimeout(() => { this.step; }, this.timeBetweenSteps);
+    // console.log('Step: ', this.step);
+    // console.log('TBT: ', this.timeBetweenSteps);
+    setTimeout(() => {
+      this.step();
+    }, this.timeBetweenSteps);
   }
   
   setPosition(top, left) {
-    var styleSettings = {
-      top: top,
-      left: left
-    };
+    let styleSettings = { top, left };
     this.$node.css(styleSettings);
   }
 }
+
+// pseudoclassical ES5
+
+// var MakeDancer = function(top, left, timeBetweenSteps) {
+//   this.top = top;
+//   this.left = left;
+//   this.timeBetweenSteps = timeBetweenSteps;
+//   this.$node = $('<span class="dancer"></span>');
+//   this.step();
+//   this.setPosition(this.top, this.left);
+// };
+
+// MakeDancer.prototype.step = function() {
+//   console.log('Step: ', this.step);
+//   console.log('TBT: ', this.timeBetweenSteps);
+//   setTimeout(() => {
+//     this.step();
+//   }, this.timeBetweenSteps);
+// };
+
+// MakeDancer.prototype.setPosition = function(top, left) {
+//   var styleSettings = {
+//     top: top,
+//     left: left
+//   };
+//   this.$node.css(styleSettings);
+// };
