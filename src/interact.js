@@ -6,20 +6,24 @@ window.interact = function() {
   console.log(window.dancers);
   let dancers = window.dancers;
   
-  while (dancers.length < 8) {
+  var fighters = _.filter(dancers, function(dancer) {
+    return $(dancer.$node).hasClass('streetFighter');
+  });
+  
+  while (fighters.length < 8) {
     var dancer = new StreetFighterDancer(
       $('body').height() * Math.random(),
       $('body').width() * Math.random(),
       Math.random() * 1000
     );
-    window.dancers.push(dancer);
+    fighters.push(dancer);
     $('body').append(dancer.$node);
   }
   
   // loop through them in pairs
-  for (let i = 0; i < dancers.length && i < 8; i += 2) {
-    let alpha = dancers[i];
-    let bravo = dancers[i + 1];
+  for (let i = 0; i < fighters.length && i < 8; i += 2) {
+    let alpha = fighters[i];
+    let bravo = fighters[i + 1];
     let width = $(document).width();
     let height = $(document).height();
     

@@ -27,7 +27,9 @@ $(document).ready(function() {
     );
     window.dancers.push(dancer);
     
-    $(dancer.$node).draggable();
+    if ($(dancer.$node).hasClass('streetFighter')) {
+      $(dancer.$node).draggable();
+    }
     
     $('body').append(dancer.$node);
   });
