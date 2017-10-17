@@ -2,35 +2,45 @@
 // [X] use css transformations to have them move at each other
 // [X] change background
 
-window.interact = function() {
+window.fight = function() {
   let dancers = window.dancers;
   
   // plays the theme song when the "FIGHT" button is clicked
-  $('#fightMusic')[0].play();
+  // $('#fightMusic')[0].play();
   
-  // select the fighters from the dancers array
-  var fighters = _.filter(dancers, function(dancer) {
-    return $(dancer.$node).hasClass('streetFighter');
-  });
+  // the funciton is not getting properly accessed here
+  // window.playPauseToggle();
   
-  // only take the first 8 fighers
-  if (fighters.length > 7) {
-    fighters.splice(0, 8);
-  }
+  // since it is only 2 lines, the code for the function is here
+  playPauseToggle();
   
-  // if there are not enough fighters, make some more
-  while (fighters.length < 8) {
-    var dancer = new StreetFighterDancer(
-      $('body').height() * Math.random(),
-      $('body').width() * Math.random(),
-      Math.random() * 1000
-    );
-    fighters.push(dancer);
-    $('body').append(dancer.$node);
+  if (window.fighters === undefined) {
+    // select the fighters from the dancers array
+    window.fighters = _.filter(dancers, function(dancer) {
+      return $(dancer.$node).hasClass('streetFighter');
+    });
     
-    // append to dancers for the spectator accumulation below
-    dancers.push(dancer);
+    // only take the first 8 fighers
+    if (fighters.length > 7) {
+      fighters.splice(0, 8);
+    }
+    
+    // if there are not enough fighters, make some more
+    while (fighters.length < 8) {
+      var dancer = new StreetFighterDancer(
+        $('body').height() * Math.random(),
+        $('body').width() * Math.random(),
+        Math.random() * 1000
+      );
+      fighters.push(dancer);
+      $('body').append(dancer.$node);
+      
+      // append to dancers for the spectator accumulation below
+      dancers.push(dancer);
+    }    
   }
+  
+
   
   // loop through them in pairs
   for (let i = 0; i < fighters.length && i < 8; i += 2) {
@@ -63,8 +73,15 @@ window.interact = function() {
   
   window.lineup(spectators);
   
+  startFighting();
+};
+
+let startFighting = _.once(() => {
   setInterval(() => {
     $('.alpha').toggleClass('leftFighter');
     $('.bravo').toggleClass('rightFighter');
   }, 500);
-};
+});
+
+
+

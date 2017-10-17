@@ -64,21 +64,20 @@ body, a:link, a:visited, a:active{
   margin-left: -50px;
 }
 
-
-/*Useless garbage*/
-/*@keyframes alpha {
-  0% {left: 0px;},
-  100% {left: 50px;}
+.niceButton {
+  background-color: #333;
+  margin: 0 5px;
+  text-decoration: none;
 }
 
-@keyframes bravo {
-  0% {left: 50px;},
-  100% {left: 0px;}
+#icon {
+  max-width: 250px;
+  cursor: pointer;
 }
 
-.fightAnimation{
-  animation-name: alpha;
-  animation-duration: 0.5s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}*/
+
+
+
+
+
+

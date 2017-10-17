@@ -7,32 +7,37 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
     
-   <!--  <script
-  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
-  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
-  crossorigin="anonymous"></script> -->
-    
     <script src="src/dancer.js"></script>
     <script src="src/blinkyDancer.js"></script>
     <script src="src/fadingDancer.js"></script>
     <script src="src/redGreenDancer.js"></script>
     <script src="src/massMovement.js"></script>
     <script src="src/streetFighterDancer.js"></script>
-    <script src="src/interact.js"></script>
+    <script src="src/fight.js"></script>
+    <script src="src/audioControls.js"></script>
   </head>
   <body>
     <div class="topbar">
       <span class="title">object dance party</span>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="MakeBlinkyDancer">add a blinky dancer</a>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="MakeFadingDancer">add a fading dancer</a>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="MakeRedGreenDancer">add a christmasy dancer</a>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="StreetFighterDancer">add a Street Fighter</a>
-      <a href="#" class="massMovement" data-dancer-mass-movement="interact">FIGHT!</a>
-      <a href="#" class="massMovement" data-dancer-mass-movement="lineup">line up</a>
+      <a href="#" class="addDancerButton niceButton" data-dancer-maker-function-name="MakeBlinkyDancer">add a blinky dancer</a>
+      <a href="#" class="addDancerButton niceButton" data-dancer-maker-function-name="MakeFadingDancer">add a fading dancer</a>
+      <a href="#" class="addDancerButton niceButton" data-dancer-maker-function-name="MakeRedGreenDancer">add a christmasy dancer</a>
+      <a href="#" class="addDancerButton niceButton" data-dancer-maker-function-name="StreetFighterDancer">add a Street Fighter</a>
+      <a href="#" class="massMovement niceButton" data-dancer-mass-movement="fight">FIGHT!</a>
+      <a href="#" class="massMovement niceButton" data-dancer-mass-movement="lineup">line up</a>
     </div>
-    <audio controls id="fightMusic">
+<!--     <audio controls id="fightMusic">
       <source src="guile-theme.mp3" type="audio/mpeg">
+    </audio> -->
+
+    <audio id="fightMusic">
+      <source id="musicSource" src="guile-theme.mp3" type="audio/mpeg">
     </audio>
+    
+    <img id="icon" src="icon.png">
+    
+    
+
     <script src="src/init.js"></script>  
   </body>
 </html>

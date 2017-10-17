@@ -41,6 +41,5 @@ $(document).ready(function() {
     // console.log(massMovementFunctionName);
     window[massMovementFunctionName]();
   });
-  
 });
 
