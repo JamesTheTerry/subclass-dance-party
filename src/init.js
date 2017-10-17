@@ -27,16 +27,18 @@ $(document).ready(function() {
     );
     window.dancers.push(dancer);
     
-    if ($(dancer.$node).hasClass('streetFighter')) {
-      $(dancer.$node).draggable();
-    }
+    // draggable messed with the placement of the fighters
+      // therefore we removed it
+    // if ($(dancer.$node).hasClass('streetFighter')) {
+    //   $(dancer.$node).draggable();
+    // }
     
     $('body').append(dancer.$node);
   });
   
   $('.massMovement').on('click', function(event) {
     var massMovementFunctionName = $(this).data('dancer-mass-movement');
-    console.log(massMovementFunctionName);
+    // console.log(massMovementFunctionName);
     window[massMovementFunctionName]();
   });
   

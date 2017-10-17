@@ -3,8 +3,9 @@
 // [ ] change background
 
 window.interact = function() {
-  console.log(window.dancers);
   let dancers = window.dancers;
+  
+  $('#fightMusic')[0].play();
   
   var fighters = _.filter(dancers, function(dancer) {
     return $(dancer.$node).hasClass('streetFighter');
@@ -42,6 +43,17 @@ window.interact = function() {
     
     bravo.setPosition(100, x);
   }
+  
+  // // line up the spectators
+  // let spectators = _.filter(dancer, (dancer) => {
+  //   // error: nothing is getting added
+  //   return dancers.indexOf(dancer);
+  // });
+  // console.log(spectators);
+  // if (spectators.length > 0) {
+  //   console.log('spectators', spectators);
+  //   window.lineup(spectators);
+  // }
   
   setInterval(() => {
     $('.alpha').toggleClass('leftFighter');
