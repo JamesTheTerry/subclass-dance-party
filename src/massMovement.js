@@ -8,7 +8,6 @@ window.lineup = function(theseDancers) {
   for (let i = 0; i < dancers.length; i++) {
     const x = width * (i + 1);
     const thisDancer = dancers[i];
-    console.log('x', x);
     thisDancer.setPosition(y, x);
   }
 };

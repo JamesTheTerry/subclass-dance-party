@@ -1,16 +1,24 @@
 // [X] get them together
-// [ ] use css transformations to have them move at each other
-// [ ] change background
+// [X] use css transformations to have them move at each other
+// [X] change background
 
 window.interact = function() {
   let dancers = window.dancers;
   
+  // plays the theme song when the "FIGHT" button is clicked
   $('#fightMusic')[0].play();
   
+  // select the fighters from the dancers array
   var fighters = _.filter(dancers, function(dancer) {
     return $(dancer.$node).hasClass('streetFighter');
   });
   
+  // only take the first 8 fighers
+  if (fighters.length > 7) {
+    fighters.splice(0, 8);
+  }
+  
+  // if there are not enough fighters, make some more
   while (fighters.length < 8) {
     var dancer = new StreetFighterDancer(
       $('body').height() * Math.random(),
@@ -19,6 +27,9 @@ window.interact = function() {
     );
     fighters.push(dancer);
     $('body').append(dancer.$node);
+    
+    // append to dancers for the spectator accumulation below
+    dancers.push(dancer);
   }
   
   // loop through them in pairs
@@ -32,7 +43,8 @@ window.interact = function() {
     $(alpha.$node).addClass('alpha');
     // set bravo fighters to have a bravo class for identification
     $(bravo.$node).addClass('bravo');
-      
+
+    // the space in which the 'fight'      
     let bracket = width / 4;
     
     let x = i / 2 * bracket + (bracket / 3);
@@ -44,16 +56,12 @@ window.interact = function() {
     bravo.setPosition(100, x);
   }
   
-  // // line up the spectators
-  // let spectators = _.filter(dancer, (dancer) => {
-  //   // error: nothing is getting added
-  //   return dancers.indexOf(dancer);
-  // });
-  // console.log(spectators);
-  // if (spectators.length > 0) {
-  //   console.log('spectators', spectators);
-  //   window.lineup(spectators);
-  // }
+  // line up the spectators
+  let spectators = _.filter(dancers, (dancer) => {
+    return !_.contains(fighters, dancer);
+  });
+  
+  window.lineup(spectators);
   
   setInterval(() => {
     $('.alpha').toggleClass('leftFighter');
