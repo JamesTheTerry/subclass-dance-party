@@ -1,5 +1,7 @@
 body, html{
   height:100%;
+  background-image: url('imgs/dancefloor.jpg');
+  background-size: cover;
 }
 body{
   margin: 0px;
@@ -9,7 +11,7 @@ body{
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addDancerButton{
+.title, .addDancerButton, .massMovement{
   padding:5px 12px;
   float:right;
 }
