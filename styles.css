@@ -34,7 +34,7 @@ body, a:link, a:visited, a:active{
   width: 100px;
   height: 100px;
   background-size: contain;
-  position: fixed;
+  position: relative;
 }
 .sFighter0{
   background-image: url('imgs/street-fighter/0-bison.png');
@@ -47,4 +47,21 @@ body, a:link, a:visited, a:active{
 }
 .sFighter3{
   background-image: url('imgs/street-fighter/3-ryu.png');
+}
+
+@keyframes alpha {
+  0% {left: 0px;},
+  100% {left: 50px;}
+}
+
+@keyframes bravo {
+  0% {left: 50px;},
+  100% {left: 0px;}
+}
+
+.alphaFighter{
+  animation-name: alpha;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
