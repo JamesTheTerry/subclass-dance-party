@@ -1,4 +1,4 @@
-// [ ] get them together
+// [X] get them together
 // [ ] use css transformations to have them move at each other
 // [ ] change background
 
