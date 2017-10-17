@@ -30,3 +30,21 @@ body, a:link, a:visited, a:active{
 .green{
   border:10px solid #66BB6A;
 }
+.streetFighter{
+  width: 100px;
+  height: 100px;
+  background-size: contain;
+  position: fixed;
+}
+.sFighter0{
+  background-image: url('imgs/street-fighter/0-bison.png');
+}
+.sFighter1{
+  background-image: url('imgs/street-fighter/1-chun.png');
+}
+.sFighter2{
+  background-image: url('imgs/street-fighter/2-ken.png');
+}
+.sFighter3{
+  background-image: url('imgs/street-fighter/3-ryu.png');
+}
