@@ -46,7 +46,7 @@ window.fight = function() {
   for (let i = 0; i < fighters.length && i < 8; i += 2) {
     let alpha = fighters[i];
     let bravo = fighters[i + 1];
-    let width = $(document).width();
+    let width = $(document).width() - 250;
     let height = $(document).height();
     
     // set alpha fighters to have an alpha class for identification
@@ -59,11 +59,11 @@ window.fight = function() {
     
     let x = i / 2 * bracket + (bracket / 3);
     
-    alpha.setPosition(100, x);
+    alpha.setPosition(200, x);
     
     x += bracket / 3;
     
-    bravo.setPosition(100, x);
+    bravo.setPosition(200, x);
   }
   
   // line up the spectators

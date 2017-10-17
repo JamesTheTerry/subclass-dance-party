@@ -14,8 +14,8 @@ window.StreetFighterDancer = class StreetFighterDancer extends MakeDancer {
   }
   
   setCharacter() {
-    var classArray = ['sFighter0', 'sFighter1', 'sFighter2', 'sFighter3'];
-    var rand = Math.floor(Math.random() * 3);
+    var classArray = ['sFighter0', 'sFighter1', 'sFighter2', 'sFighter3', 'sFighter4', 'sFighter5', 'sFighter6', 'sFighter7', 'sFighter8', 'sFighter9', 'samus'];
+    var rand = Math.floor(Math.random() * 11);
     return classArray[rand];
   }
 };

@@ -48,29 +48,95 @@ body, a:link, a:visited, a:active{
 .sFighter0{
   background-image: url('imgs/street-fighter/0-bison.png');
 }
+
 .sFighter1{
   background-image: url('imgs/street-fighter/1-chun.png');
+  transform: scaleX(-1);
 }
+
 .sFighter2{
   background-image: url('imgs/street-fighter/2-ken.png');
 }
+
 .sFighter3{
   background-image: url('imgs/street-fighter/3-ryu.png');
 }
+
+.sFighter4{
+  background-image: url('imgs/street-fighter/4.png');
+}
+
+.sFighter5{
+  background-image: url('imgs/street-fighter/5.png');
+  transform: scaleX(-1);
+}
+
+.sFighter6{
+  background-image: url('imgs/street-fighter/6.png');
+}
+
+.sFighter7{
+  background-image: url('imgs/street-fighter/7.gif');
+}
+
+.sFighter8{
+  background-image: url('imgs/street-fighter/8.png');
+}
+
+.sFighter9{
+  background-image: url('imgs/street-fighter/9.png');
+  transform: scaleX(-1);
+}
+
+.samus{
+  background-image: url('imgs/street-fighter/10.png');
+}
+
+.alpha{
+  
+}
+
+.bravo{
+  transform: scaleX(-1);
+}
+
 .leftFighter{
   margin-left: 50px;
 }
+
 .rightFighter{
   margin-left: -50px;
 }
 
+#buttons {
+  margin-top: 25px;
+  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+  float: right;
+}
+
+.button-wrapper {
+  margin-bottom: 25px;
+}
+
 .niceButton {
-  background-color: #333;
+  cursor: pointer;
+  font-size:14px;
+  min-height: 45px;
+  min-width: 200px;
+  float: right;
+  color: #000898;
+  border-radius: 5px;
+  border-width: 0px;
+  background-image: linear-gradient(to bottom, #ffea00, #ff2a00);
   margin: 0 5px;
   text-decoration: none;
+  font-family: 'Press Start 2P', cursive;
 }
 
 #icon {
+  margin: 25px;
   max-width: 250px;
   cursor: pointer;
 }
