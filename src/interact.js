@@ -22,10 +22,13 @@ window.interact = function() {
     let bravo = dancers[i + 1];
     let width = $(document).width();
     let height = $(document).height();
+    
+    // set alpha fighters to have an alpha class for identification
+    $(alpha.$node).addClass('alpha');
+    // set bravo fighters to have a bravo class for identification
+    $(bravo.$node).addClass('bravo');
       
     let bracket = width / 4;
-    
-    
     
     let x = i / 2 * bracket + (bracket / 3);
     
@@ -34,6 +37,10 @@ window.interact = function() {
     x += bracket / 3;
     
     bravo.setPosition(100, x);
-    
   }
+  
+  setInterval(() => {
+    $('.alpha').toggleClass('leftFighter');
+    $('.bravo').toggleClass('rightFighter');
+  }, 500);
 };

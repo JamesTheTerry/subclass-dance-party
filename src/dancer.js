@@ -53,9 +53,9 @@ class MakeDancer {
   
   setPosition(top, left) {
     let styleSettings = { top, left };
-    console.log('styleSettings', styleSettings);
+    // console.log('styleSettings', styleSettings);
     this.$node.css(styleSettings);
-    console.log(this.$node);
+    // console.log(this.$node);
   }
 }
 

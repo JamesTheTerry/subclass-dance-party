@@ -26,15 +26,24 @@ body, a:link, a:visited, a:active{
   border:10px solid red;
   border-radius:10px;
   position:absolute;
+  transition: linear;
+  transition-duration: 1s;
 }
 .green{
   border:10px solid #66BB6A;
+}
+.grow{
+  /*border:10px solid blue !important;*/
+  transform: scale(2);
 }
 .streetFighter{
   width: 100px;
   height: 100px;
   background-size: contain;
-  position: relative;
+  background-repeat: no-repeat;
+  position: fixed;
+  transition: linear;
+  transition-duration: 0.5s;
 }
 .sFighter0{
   background-image: url('imgs/street-fighter/0-bison.png');
@@ -48,8 +57,16 @@ body, a:link, a:visited, a:active{
 .sFighter3{
   background-image: url('imgs/street-fighter/3-ryu.png');
 }
+.leftFighter{
+  margin-left: 50px;
+}
+.rightFighter{
+  margin-left: -50px;
+}
 
-@keyframes alpha {
+
+/*Useless garbage*/
+/*@keyframes alpha {
   0% {left: 0px;},
   100% {left: 50px;}
 }
@@ -59,9 +76,9 @@ body, a:link, a:visited, a:active{
   100% {left: 0px;}
 }
 
-.alphaFighter{
+.fightAnimation{
   animation-name: alpha;
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-}
+}*/
