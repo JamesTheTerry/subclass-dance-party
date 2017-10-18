@@ -32,6 +32,7 @@ window.conga = function(offset) {
   }
   
   setTimeout( () => {
+    console.log(dancers);
     conga(offset + 5); // move 5 degrees
   }, 500);
   

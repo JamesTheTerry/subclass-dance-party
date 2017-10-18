@@ -15,26 +15,12 @@
     <script src="src/streetFighterDancer.js"></script>
     <script src="src/fight.js"></script>
     <script src="src/conga.js"></script>
+    <script src="src/lissajousCurve.js"></script>
     <script src="src/rainbowDancer.js"></script>
     <script src="src/audioControls.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
   </head>
   <body>
-    <!-- <div class="topbar">
-      <span class="title">object dance party</span>
-      <a href="#" class="addDancerButton niceButton" data-dancer-maker-function-name="MakeBlinkyDancer">add a blinky dancer</a>
-      <a href="#" class="addDancerButton niceButton" data-dancer-maker-function-name="MakeFadingDancer">add a fading dancer</a>
-      <a href="#" class="addDancerButton niceButton" data-dancer-maker-function-name="MakeRedGreenDancer">add a christmasy dancer</a>
-      <a href="#" class="addDancerButton niceButton" data-dancer-maker-function-name="StreetFighterDancer">add a Street Fighter</a>
-      <a href="#" class="massMovement niceButton" data-dancer-mass-movement="fight">FIGHT!</a>
-      <a href="#" class="massMovement niceButton" data-dancer-mass-movement="lineup">line up</a>
-      <a href="#" class="massMovement niceButton" 
-      data-dancer-mass-movement="conga">Conga</a>
-    </div> -->
-<!--     <audio controls id="fightMusic">
-      <source src="guile-theme.mp3" type="audio/mpeg">
-    </audio> -->
-
     <audio id="fightMusic">
       <source id="musicSource" src="guile-theme.mp3" type="audio/mpeg">
     </audio>
@@ -72,6 +58,12 @@
       
       <div class="button-wrapper">
         <button class="addDancerButton niceButton" data-dancer-maker-function-name="RainbowDancer">Rainbow</button>
+      </div>
+      
+      <div class="button-wrapper">
+        <button class="addDancerButton niceButton"
+        data-dancer-maker-function-name="lissajousCurve">Lissajous Curve
+        </button>
       </div>
       
       
