@@ -6,7 +6,7 @@ window.conga = function(offset) {
   let c = {};
   c.x = $(window).width() / 2;
   c.y = $(window).height() / 2;
-  c.radius = 200; // may alter this later
+  c.radius = 500; // may alter this later
   
   let circumference = 2 * Math.PI * c.radius;
   let arcLength = circumference / dancers.length;
