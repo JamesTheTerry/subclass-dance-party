@@ -139,7 +139,6 @@ body, a:link, a:visited, a:active{
   margin: 25px;
   max-width: 250px;
   cursor: pointer;
-  border: 10px solid;
 }
 
 @keyframes rainbowTransition {
