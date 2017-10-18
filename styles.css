@@ -93,7 +93,7 @@ body, a:link, a:visited, a:active{
 }
 
 .alpha{
-  
+
 }
 
 .bravo{
@@ -141,9 +141,23 @@ body, a:link, a:visited, a:active{
   cursor: pointer;
 }
 
-
-
-
-
-
-
+@keyframes rainbow {
+  0% {border-color: #f80c12;},
+  5% {border-color: #ee1100;},
+  10% {border-color: #ff3311;},
+  15% {border-color: #ff4422;},
+  20% {border-color: #ff6644;},
+  25% {border-color: #ff9933;},
+  30% {border-color: #feae2d;},
+  35% {border-color: #ccbb33;},
+  40% {border-color: #d0c310;},
+  45% {border-color: #aacc22;},
+  50% {border-color: #69d025;},
+  55% {border-color: #22ccaa;},
+  60% {border-color: #12bdb9;},
+  65% {border-color: #11aabb;},
+  70% {border-color: #4444dd;},
+  80% {border-color: #3311bb;},
+  90% {border-color: #3b0cbd;},
+  100% {border-color: #442299;},
+}
